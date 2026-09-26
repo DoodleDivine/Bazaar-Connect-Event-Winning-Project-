@@ -1,4 +1,4 @@
-This branch houses the backend of the project.
+**This branch houses the backend of the project.**
 
 Everything required to be in in backend (data saves, security/privacy) are all handled here.
 
@@ -10,11 +10,8 @@ there are notes left over on different pieces of logic programs).
 - **Flask** was used to help host and maintain the website backend
 AND with the use of HTTP requests, entered data by the user was pulled
 and stored into its proper json file.
-- Bcrypt was used to validate and keep credentials secure.
+- Bcrypt was used to validate logic and keep credentials secure.
 - Other libraries/packages were used as shortcuts to make work quicker.
-
-**script.js**
-- 
 
 **JSON files**🗃️
 - These files were used for storing website data (as seen by the names of the files).
