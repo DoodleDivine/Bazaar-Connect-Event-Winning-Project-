@@ -21,3 +21,7 @@ an improvision.
 - When data was collected from **script.js**, **Main.py**'s Flask Framework
 quickly stored the data temporarily and saved it to the actual data storage
 intended (which are the json files).
+
+- **FYI**, Admin.json wasn't actually used in the final product of the prototype,
+it was meant to be only accessed for developers to track down suspicious behavior
+as the focus was more of a secure approach. It got scrapped.
