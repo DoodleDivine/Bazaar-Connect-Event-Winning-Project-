@@ -2,7 +2,6 @@
 
 Everything required to be in in backend (data saves, security/privacy) are all handled here.
 
-I'll be explaining what the files do 
 (if you read the Main.py file, there are notes left over on different pieces of logic programs).
 
 ## **Main.py**🔧🔐
