@@ -9,7 +9,8 @@ app = Flask(__name__,
             template_folder='../frontend/templates',
             static_folder='../frontend/static')
 
-app.secret_key = "LightGroupProjects"
+## Create your own secret key
+app.secret_key = "" 
 
 UploadFolder = os.path.join(app.static_folder, 'productuploads')
 
