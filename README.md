@@ -14,6 +14,11 @@ The project is a prototype, it only contains the core concepts of what was focus
 
 I mainly focused on the backend while one of my other teammates focused on the frontend.
 
+It's published as open source, so you can inspire the project idea and make something out
+of it as well.
+
+There are more README files in the folders **frontend** and **backend**.
+
 ## **Roles**
 
 Backend: Me
