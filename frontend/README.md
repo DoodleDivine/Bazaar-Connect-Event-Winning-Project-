@@ -15,6 +15,6 @@ for the user to interact with on site.
 
 - This folder focuses on UI/UX design, so that the user could be kept interested.
 - **css** contains **style.css** that customizes responsive UI for all devices as
-well as focusing on the color scheme of the project.
+well as focusing on the color scheme of the site.
 - **IconFolder** only has the icon for the prototype, also for design.
 - **js** contains **script.js** used for asynchronous API integration.
