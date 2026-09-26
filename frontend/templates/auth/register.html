@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Bazaar-Connect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+</head>
+<body class="public">
+
+<header>
+    <nav>
+        <h1>Bazaar-Connect</h1>
+        <ul>
+            <li><a href="{{ url_for('Index') }}">Home</a></li>
+            <a href="{{ url_for('About') }}">About</a>
+            <li><a href="{{ url_for('Contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="auth-container">
+    <h2>Create Account</h2>
+
+    <form>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input id="NameCredentails" type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input id="EmailCredentials" type="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Register As</label>
+            <select id="RegisterAsOptions" required>
+                <option value="">Select role</option>
+                <option value="donor">Donor</option>
+                <option value="receiver">Receiver</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input id="PasswordCredentials" type="password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input id="ConfirmPasswordCredentials" type="password" required>
+        </div>
+
+        <button id="RegisterButton" style="margin-bottom: 20px;">Register</button>
+
+        <p style="margin-top: 10px;">Already have an account?  <a href="{{ url_for('Login') }}">Login</a></p>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

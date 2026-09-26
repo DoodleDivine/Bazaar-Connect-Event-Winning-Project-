@@ -1,0 +1,583 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body.public {
+    background-color: #f4f6f8;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ===== HEADER & NAV ===== */
+header {
+    background-color: #1f2933;
+    padding: 15px 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ===== AUTH CONTAINER ===== */
+.auth-container {
+    background-color: #ffffff;
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1f2933;
+}
+
+/* ===== FORM ===== */
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ===== BUTTON ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .auth-container {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+}
+/* ---------------- Global ---------------- */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f5f7fa;
+    color: #1b263b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------------- Header / Navbar ---------------- */
+header {
+    background: linear-gradient(90deg, #0d1b2a, #1b263b);
+    color: #fff;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #ffd700;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav li a {
+    color: #fff;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav li a:hover {
+    background: #ffd700;
+    color: #0d1b2a;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #ffd700;
+}
+
+/* ---------------- Layout / Sidebar ---------------- */
+.layout {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+aside {
+    width: 220px;
+    background: #1b263b;
+    color: #fff;
+    padding: 20px;
+}
+
+aside ul {
+    padding: 0;
+}
+
+aside li a {
+    color: #ffd700;
+    display: block;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+aside li a:hover {
+    color: #fff;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+main h2 {
+    font-size: 32px;
+    color: #0d1b2a;
+    margin-bottom: 20px;
+}
+
+/* ---------------- Product Design --------------- */
+.add-product-form input {
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 49.81%;
+    box-sizing: border-box;
+
+}
+
+.add-product-form .btn-large {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.add-product-form .btn-large:hover {
+    background-color: #ffd700;
+    color: #0d1b2a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* ---------------- Cards ---------------- */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    max-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #0d1b2a;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1b263b;
+}
+
+/* ---------------- Tables ---------------- */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.table th {
+    background: #0d1b2a;
+    color: #ffd700;
+}
+
+.table tr:nth-child(even) {
+    background: #f0f0f0;
+}
+
+/* ---------------- Buttons ---------------- */
+button, .btn {
+    padding: 10px 20px;
+    background: #ffd700;
+    color: #0d1b2a;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    background: #fff;
+    color: #0d1b2a;
+}
+
+/* ---------------- Auth Forms ---------------- */
+.auth-container {
+    max-width: 400px;
+    margin: 70px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+}
+
+.auth-container input, .auth-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.auth-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.message.error {
+    color: red;
+}
+
+.message.success {
+    color: green;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+    background: #1b263b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+    nav ul { display: none; }
+    .menu-btn { display: block; }
+    .layout { flex-direction: column; }
+    aside { width: 100%; display: none; position: fixed; top: 70px; left: 0; height: calc(100% - 70px); z-index: 20; overflow-y: auto; transition: left 0.3s ease; }
+    aside.active { display: block; }
+    main { padding: 20px; }
+}
+
+@media (max-width: 500px) {
+    .auth-container { margin: 40px 15px; }
+    .cards { flex-direction: column; }
+}
+
+/* ---------------- Orders Page ---------------- */
+#ordersTable tr td button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#ordersTable tr td button:hover {
+    background-color: #ffd700;
+    color: #0d1b2a;
+}
+
+/* Highlight different order statuses */
+#ordersTable tr td:nth-child(4) {
+    font-weight: 600;
+}
+
+#ordersTable tr td:nth-child(4):contains("Pending") {
+    color: #f59e0b;
+}
+
+#ordersTable tr td:nth-child(4):contains("Delivered") {
+    color: #10b981;
+}
+
+/* ---------------- Products Page ---------------- */
+.cards .card button {
+    margin-top: 15px;
+    width: auto;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.cards .card button:hover {
+    background-color: #ffd700;
+    color: #0d1b2a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cards .card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1b263b;
+}
+
+.cards {
+    flex-wrap: wrap;
+}
+
+.cards .card {
+    flex: 1 1 30%;
+    min-width: 220px;
+    margin-bottom: 20px;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.logo img {
+    margin-right: 8px;
+}
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;   /* 🔥 makes it circular */
+    object-fit: cover;    /* prevents stretching */
+    margin-right: 8px;
+}
+
+/* Order Page */
+
+
+.status-pending {
+    background-color: #ffd700;
+    color: #856404;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+
+.status-delivered {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+/* ===== NAV FIX ===== */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffd700; /* better contrast */
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Report-Title {
+    text-align: center;
+    color: #ffd700;
+    font-size: x-large;
+}
+
+.Report-Info {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.Donor-Heading {
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Donor-Info {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.Receiver-Heading {
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Receiver-Info {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.Safety-Heading {
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.Safety-Info {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
