@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Bazaar-Connect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+</head>
+<body class="public">
+
+<header>
+    <nav>
+        <h1>Bazaar-Connect</h1>
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <ul>
+            <li><a href="{{ url_for('Index') }}">Home</a></li>
+            <li><a href="{{ url_for('About') }}">About</a></li>
+            <li><a href="{{ url_for('Contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('Login') }}">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section id="about">
+        <h2>About Bazaar-Connect</h2>
+
+        <section>
+            <h3>Who We Are</h3>
+            <p>
+                Bazaar-Connect is a locally inspired B2B surplus exchange platform built
+                for Malindi’s hospitality ecosystem. We connect hotels, resorts, and event
+                venues with charities, farmers, and recycling partners to ensure surplus
+                food and supplies are redistributed—not wasted.
+            </p>
+            <p>
+                Born from the realities of a tourism-driven town, Bazaar-Connect focuses
+                on solving problems that large national platforms often overlook:
+                bulk event waste, time-sensitive surplus, and limited access to smartphones.
+            </p>
+        </section>
+
+        <section>
+            <h3>Why We Exist</h3>
+            <p>
+                Every day in Malindi, perfectly usable food is discarded after weddings,
+                conferences, and hotel buffets—while nearby communities face food shortages
+                and farmers struggle with rising input costs.
+            </p>
+            <p>We exist to change that.</p>
+            <p>
+                Bazaar-Connect transforms surplus into opportunity by using real-time
+                technology, offline access, and circular economy thinking to create value
+                for everyone involved.
+            </p>
+        </section>
+
+        <section>
+            <h3>Our Mission</h3>
+            <p>
+                To reduce food and resource waste in Malindi by enabling fast, fair,
+                and inclusive redistribution through technology built for local needs.
+            </p>
+        </section>
+
+        <section>
+            <h3>Our Vision</h3>
+            <ul>
+                <li>No quality surplus goes to waste</li>
+                <li>Hotels operate responsibly and efficiently</li>
+                <li>Local farmers and charities benefit directly</li>
+                <li>Technology works for smartphones and basic phones</li>
+            </ul>
+        </section>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <section>
+            <h3>Real-Time Surplus Listings</h3>
+            <p>
+                Hotels and event organizers can list surplus food or supplies instantly,
+                with automatic expiry timers to ensure items are claimed while still usable.
+            </p>
+        </section>
+        <section>
+            <h3>Instant Notifications</h3>
+            <p>
+                Using real-time messaging technology, receivers get immediate alerts
+                when surplus becomes available nearby—reducing delays and spoilage.
+            </p>
+        </section>
+        <section>
+            <h3>Dual User System</h3>
+            <p>
+                Bazaar-Connect is built with two dedicated user roles:
+            </p>
+            <ul>
+                <li><strong>Donors:</strong> Hotels, resorts, conference venues</li>
+                <li><strong>Receivers:</strong> Charities, farmers, composters, small vendors</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Offline-First USSD Access</h3>
+            <ul>
+                <li>Receive surplus alerts</li>
+                <li>View available items</li>
+                <li>Claim surplus using basic phones</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Hotel-to-Farm Circular Exchange</h3>
+            <ul>
+                <li>Food scraps → compost</li>
+                <li>Compost → fertilizer</li>
+                <li>Fertilizer → fresh produce for hotels</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Secure & Time-Sensitive Database</h3>
+            <p>
+                Every listing is tracked with timestamps, user verification, and status
+                updates to maintain accountability and transparency.
+            </p>
+        </section>
+    </section>
+
+    <section id="impact">
+        <h2>Impact</h2>
+        <section>
+            <h3>Creating Real Change in Malindi</h3>
+            <p>
+                Bazaar-Connect is more than a tech project—it is a sustainability engine
+                designed for real-world impact.
+            </p>
+        </section>
+        <section>
+            <h3>Social Impact</h3>
+            <ul>
+                <li>Increased food access for local charities and vulnerable communities</li>
+                <li>Reduced post-event food waste</li>
+                <li>Stronger partnerships between hotels and local organizations</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Economic Impact</h3>
+            <ul>
+                <li>Cost savings for hotels through reduced disposal</li>
+                <li>New opportunities for farmers and composting businesses</li>
+                <li>Inclusion of small-scale vendors through USSD access</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Environmental Impact</h3>
+            <ul>
+                <li>Reduced landfill waste and methane emissions</li>
+                <li>Promotion of composting and organic recycling</li>
+                <li>Support for sustainable tourism practices in Malindi</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sustainable Development Goals</h3>
+            <ul>
+                <li><strong>SDG 2 – Zero Hunger</strong></li>
+                <li><strong>SDG 11 – Sustainable Cities and Communities</strong></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Measuring Success</h3>
+            <ul>
+                <li>Quantity of surplus redistributed</li>
+                <li>Number of active hotels and partners</li>
+                <li>Reduction in waste disposal volumes</li>
+                <li>Participation of offline users via USSD</li>
+            </ul>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Bazaar-Connect. All rights reserved.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

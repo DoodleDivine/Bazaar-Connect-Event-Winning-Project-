@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Donor | Bazaar-Connect</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+</head>
+<body class="private">
+
+<header>
+    <nav>
+        <h1>Bazaar-Connect - Donor</h1>
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <ul>
+            <li><a href="{{ url_for('DonorDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('DonorOrders') }}">Orders</a></li>
+            <li><a href="{{ url_for('DonorProducts') }}">Products</a></li>
+            <li><a href="{{ url_for('DonorReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="layout">
+    <aside id="sidebar">
+        <ul>
+            <li><a href="{{ url_for('DonorDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('DonorOrders') }}">Orders</a></li>
+            <li><a href="{{ url_for('DonorProducts') }}">Products</a></li>
+            <li><a href="{{ url_for('DonorReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Dashboard</h2>
+        <p id="greeting">Welcome Back, {{ user_name }}!</p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Orders</h3>
+                <p id="totalOrders">{{ total_orders }}</p>
+            </div>
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">{{ product_count }}</p>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

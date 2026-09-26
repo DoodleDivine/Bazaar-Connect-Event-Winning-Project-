@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+    <title>Reports | Bazaar-Connect</title>
+</head>
+<body style="overflow: auto;">
+    <header>
+    <nav>
+
+        <div class="nav-left">
+            <a href="{{ url_for('Index') }}" class="logo">
+                <img src="{{ url_for('static', filename='IconFolder/logo.png') }}" 
+                     alt="Bazaar Connect Logo">
+                <span>Bazaar-Connect - Reports</span>
+            </a>
+
+            <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        </div>
+
+        <ul>
+            <li><a href="{{ url_for('ReceiverDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('ReceiverOrders') }}">Orders</a></li>
+            <li><a href="{{ url_for('ReceiverProducts') }}">Products</a></li>
+            <li><a href="{{ url_for('ReceiverReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+        
+    </nav>
+</header>
+
+
+<div class="layout">
+
+    <aside id="sidebar">
+        <ul>
+            <li><a href="{{ url_for('ReceiverDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('ReceiverOrders') }}">Orders</a></li>
+            <li><a href="{{ url_for('ReceiverProducts') }}">Products</a></li>
+            <li><a href="{{ url_for('ReceiverReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </aside>
+    
+    <main> 
+    <section class="Report-Info">
+        <p>This page reports guiding information on the site.</p>
+        <p>If you are a new user, please read the information below</p>
+        <p>To return, click the return button on the webpage.</p>
+    </section>
+
+    <h3 class="Donor-Heading">Donor Guide</h3>
+
+    <section class="Donor-Info">
+        <p>As a donor, your dashboard has 'Total Products' and 'Total Orders'.</p>
+        <p>You can only see the products you've added on the product page</p>
+        <p>and see the businesses that have ordered you're products on the order page.</p>
+        <p>There is also a given expiry date when you add a product for reliancy.</p>
+    </section>
+
+    <h3 class="Receiver-Heading">Receiver Guide</h3>
+
+    <section class="Receiver-Info">
+        <p>As a receiver, your dashboard shows the available products at</p>
+        <p>the current time. (this is the same for the receivers product page)</p>
+        <p>If there are no products at all, then the product page is empty</p>
+        <p>at the moment.</p>
+        <p>You can place orders on whatever product you'd like to have.</p>
+    </section>
+
+    <h3 class="Safety-Heading">Safety Guide</h3>
+
+    <section class="Safety-Info">
+        <p>Our database is not strong at the moment,</p>
+        <p>but it gets the job done.</p>
+        <p>If you get scammed, contact us through our</p>
+        <p>contact site and provide the scammers</p>
+        <p>information using the order page.</p>
+        <p>However, we advise you not to actually place orders</p>
+        <p>on this website as it is a prototype concept.</p>
+        <p>As time passes on, we will expand security and customer safety</p>
+        <p>so that all users will have a great experience.</p>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <footer>
+        <p>&copy; 2026 Bazaar-Connect. All rights reserved.</p>
+    </footer>
+</main>
+</div>
+</body>
+</html>

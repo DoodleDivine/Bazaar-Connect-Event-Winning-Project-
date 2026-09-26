@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | Bazaar-Connect</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+</head>
+<body class="public">
+
+<header>
+    <nav>
+        <h1>Bazaar-Connect</h1>
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <ul>
+            <li><a href="{{ url_for('Index') }}">Home</a></li>
+            <li><a href="{{ url_for('About') }}">About</a></li>
+            <li><a href="{{ url_for('Contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('Login') }}">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <h2>Contact Us (Reviews)</h2>
+    <p>Email: lightmalindi350@gmail.com</p>
+    <p>Instagram: <a href="https://www.instagram.com/bazaar.connect/?hl=en">Bazaar-Connect.</a> </p>
+    <p>Location: Malindi, Kenya</p>
+
+    <br>
+
+    <h2>Contact Us (Personally)</h2>
+    <p>Harun Katana</p>
+    <p>Email: hrnkatana@gmail.com</p>
+
+    <br>
+
+    <p>Aaron John</p>
+    <p>Email: officialdgworks@gmail.com</p>
+
+    <br>
+    
+    <p>Marcus Garvey</p>
+    <p>Email: marcusgarvey94454@gmail.com</p>
+</main>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

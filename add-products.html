@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Product | Bazaar-Connect</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+</head>
+<body class="private">
+
+<header>
+    <nav>
+        <h1>Bazaar-Connect - Donor</h1> 
+        <ul>
+            <li><a href="{{ url_for('DonorDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('AddProducts') }}">Add Product</a></li>
+            <li><a href="{{ url_for('DonorOrders') }}">Orders</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="layout">
+    <aside id="sidebar">
+        <ul>
+            <li><a href="{{ url_for('DonorDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('AddProducts') }}">Add Product</a></li>
+            <li><a href="{{ url_for('DonorOrders') }}">Orders</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Add New Product</h2>
+        <form id="addProductForm">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="productDesc">Description</label>
+                <textarea id="productDesc" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Price (KSh)</label>
+                <input type="number" id="productPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="productStock">Quantity in Stock</label>
+                <input type="number" id="productStock" required>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Upload Image</label>
+                <input type="file" id="productImage" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="productPhoneNumber">Add your Phone Number</label>
+                <input type="text" id="productPhoneNumber"required>
+            </div>
+            <div class="form-group">
+                <label for="productExpiryDate">Listing Duration</label>
+                <select id="productExpiry">
+                    <option value="0.083"> 5 minutes (Testing)</option>
+                    <option value="24"> 24 hours (1 day)</option>
+                    <option value="48"> 48 hours (2 days)</option>
+                    <option value="168"> 168 hours (1 week)</option>
+                </select>
+            </div>
+            <button id="AddProductButton">Add Product</button>
+        </form>
+    </main>
+</div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazaar-Connect | Home</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+
+    <style>
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            color: #ffd700;
+            gap: 8px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;  
+            object-fit: cover;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: #ffd700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+
+            <a href="{{ url_for('Index') }}" class="logo">
+                <img src="{{ url_for('static', filename='IconFolder/logo.png') }}" 
+                     alt="Bazaar Connect Logo">
+                <span>Bazaar-Connect</span>
+            </a>
+
+            <ul>
+                <li><a href="{{ url_for('Index') }}">Home</a></li>
+                <li><a href="{{ url_for('About') }}">About</a></li>
+                <li><a href="{{ url_for('Contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('Login') }}">Login</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to Bazaar-Connect</h1>
+        <p>Hi, Welcome To Bazaar Connect</p>
+        <p>Click the button below to get started!</p>
+
+        <ul>
+            <li><a href="{{ url_for('Register') }}">Register</a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bazaar-Connect</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Orders-Receiver | Bazaar-Connect</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+</head>
+
+<body class="private">
+
+<header>
+    <nav>
+        <h1>Bazaar-Connect - Receiver</h1>
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <ul>
+            <li><a href="{{ url_for('ReceiverDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('ReceiverOrders') }}">My Orders</a></li>
+            <li><a href="{{ url_for('ReceiverProducts') }}">Products</a></li>
+            <li><a href="{{ url_for('ReceiverReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="layout">
+    <aside id="sidebar">
+        <ul>
+            <li><a href="{{ url_for('ReceiverDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('ReceiverOrders') }}">My Orders</a></li>
+            <li><a href="{{ url_for('ReceiverProducts') }}">Products</a></li>
+            <li><a href="{{ url_for('ReceiverReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Your current Orders</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">Order ID</th>
+                    <th style="text-align: center;">Item</th>
+                    <th style="text-align: center;">Cost</th>
+                    <th style="text-align: center;">Status</th>
+                    <th cstyle="text-align: center;">Day Ordered</th>
+                    <th>Time Ordered</th> </tr>
+            </thead>
+            <tbody id="ordersTable">
+                {% if orders %}
+                    {% for order in orders %}
+                <tr>
+                    <td style="text-align: center;">#{{ order.orderID }}</td>
+                    <td style="text-align: center;">{{ order.productName}}</td>
+                    <td style="text-align: center;"><strong>Ksh {{ order.price }}</strong></td>
+                    <td style="text-align: center;"><span class="status-{{ order.status | lower }}">{{ order.status }}</span></td>
+                    <td>{{ order.timestamp[:10] }}</td>
+                    <td>{{ order.timestamp[11:16] }}</td>
+                </tr>
+                    {% endfor %}
+                {% else %}
+                <tr><td colspan="6">You have not ordered anything yet.</td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </main>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

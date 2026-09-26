@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Dashboard - Receiver | Bazaar-Connect</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='IconFolder/logo.png') }}">
+</head>
+<body class="private">
+
+<header>
+    <nav>
+        <h1>Bazaar-Connect - Receiver</h1>
+        <ul>
+            <li><a href="{{ url_for('ReceiverDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('ReceiverOrders') }}">My Orders</a></li>
+             <li><a href="{{ url_for('ReceiverProducts') }}">Products</a></li>
+             <li><a href="{{ url_for('ReceiverReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="layout">
+    <aside id="sidebar">
+        <ul>
+            <li><a href="{{ url_for('ReceiverDashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('ReceiverOrders') }}">My Orders</a></li>
+            <li><a href="{{ url_for('ReceiverProducts') }}">Products</a></li>
+            <li><a href="{{ url_for('ReceiverReports') }}">Reports</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Welcome Back, {{ user_name }}</h2>
+        <section>
+            <h3>Available Products</h3>
+            <div class="cards">
+            {% if products %}
+                {% for product in products %}
+            <div class="card">
+                <img src="{{ product.ViewProduct}}" alt="{{ product.ProductName}}">
+                
+                <h3>{{product.ProductName}}</h3>
+                <br>
+                <p>Ksh {{product.Price}}</p>
+                <br>
+                <p>Stock: {{product.Stock}}</p>
+                <br>
+                <p>Description: {{product.description}}</p>
+                <br>
+                <p>No.{{ product.phonenumber }}</p>
+                <p> <small>Expires: {{ product.expirytime[:10]}} at {{ product.expirytime[11:16] }}</small></p>
+                <button class="btn" onclick="crearOrderButton('{{ product.ProductName}}', '{{ product.Price}}', '{{ product.DonorEmail}}')">Create Order</button>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No products available at the moment. Check back soon!</p>
+        {% endif %}
+        </div>
+        </section>
+    </main>
+</div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
