@@ -17,5 +17,7 @@ I mainly focused on the backend while one of my other teammates focused on the f
 ## **Roles**
 
 Backend: Me
+
 Frontend/UI/UX Design: [H4r00nK-10](https://github.com/H4r00nK-10)
+
 Marketer: (No Github account)
