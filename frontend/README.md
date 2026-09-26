@@ -14,7 +14,7 @@ for the user to interact with on site.
 ## **Static Folder**📁
 
 - This folder focuses on UI/UX design, so that the user could be kept interested.
-- **css** contains **style.css** that designs the color scheme.
+- **css** contains **style.css** that customizes responsive UI for all devices as
+well as focusing on the color scheme of the project.
 - **IconFolder** only has the icon for the prototype, also for design.
-- **js** contains **script.js** that pulls data entered by the user from the
-interface and sends it to the backend.
+- **js** contains **script.js** used for asynchronous API integration.
