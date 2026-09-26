@@ -18,4 +18,4 @@ for the user to interact with on site.
 - **css** contains **style.css** that customizes responsive UI for all devices as
 well as focusing on the color scheme of the site.
 - **IconFolder** only has the icon for the prototype, also for design.
-- **js** contains **script.js** used for asynchronous API integration.
+- **js** contains **script.js** used for asynchronous API integration to the backend.
