@@ -1,6 +1,6 @@
 # **This branch houses the frontend of the project.**
 
-Everything interface friendly (sign up buttons, animations, design) are all handled here
+Everything interface friendly (sign up buttons, animations, design) are all handled here.
 
 (There are some files that have notes, where you identify the purpose of each part of the program).
 
@@ -8,8 +8,9 @@ Everything interface friendly (sign up buttons, animations, design) are all hand
 
 - This folder mainly stores other folders, (**auth**,**pages**) which contain html pages
 for the user to interact with on site.
-- **auth** contains the login and register pages.
-- **pages** contains most of the other pages (long list won't mention all of them).
+- **auth** contains the login and register pages which collects data and makes use of **Flasks**
+**HTTP requests** to send the data to the backend.
+- **pages** contains most of the other pages, which are linked together through navigation routes.
 
 ## **Static Folder**📁
 
